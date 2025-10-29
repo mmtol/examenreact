@@ -32,7 +32,7 @@ export default class Serie extends Component
                     <img src={this.state.serie.imagen} style={{width:"200px", height:"200px"}}/>
                     <h1>{this.state.serie.nombre}</h1>
                     <h2>IMDB: {this.state.serie.puntuacion}</h2>
-                    <button><NavLink className="nav-link active" aria-current="page" to="/personajes">Personajes</NavLink></button>
+                    <button><NavLink className="nav-link active" aria-current="page" to={"/personajes/"+this.props.idSerie}>Personajes</NavLink></button>
                 </div>
             }
         </div>

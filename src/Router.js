@@ -17,6 +17,12 @@ export default class Router extends Component
       return <Serie idSerie={idSerie}/>
     }
 
+    function PersonajesElement()
+    {
+      let {idSerie} = useParams();
+      return <Personajes idSerie={idSerie}/>
+    }
+
     return (
       <BrowserRouter>
         <Menu/>
@@ -25,7 +31,7 @@ export default class Router extends Component
             <Route path="/crear" element={<Crear/>}/>
             <Route path="/modificar" element={<Modificar/>}/>
             <Route path="/serie/:idSerie" element={<SerieElement/>}/>
-            <Route path="/personajes" element={<Personajes/>}/>
+            <Route path="/personajes/:idSerie" element={<PersonajesElement/>}/>
         </Routes>
       </BrowserRouter>
     )

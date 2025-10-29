@@ -9,7 +9,7 @@ export default class Menu extends Component
 
   cargarSeries()
   {
-    var endPoint = "/api/Series";
+    var endPoint = "api/Series";
     axios.get(this.url+endPoint).then(response =>
     {
       this.setState({series:response.data});
@@ -56,8 +56,8 @@ export default class Menu extends Component
                                   this.state.series.map((serie, index) =>
                                   {
                                     return(
-                                      <li className="nav-item" key={index}>
-                                        <NavLink className="nav-link active" aria-current="page" to="/serie/:idSerie">{serie.nombre}</NavLink>
+                                      <li key={index}>
+                                        <NavLink className="dropdown-item" to={"/serie/"+serie.idSerie}>{serie.nombre}</NavLink>
                                       </li>
                                     )
                                   })
