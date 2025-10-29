@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Global from '../Global'
 import axios from 'axios';
-import { Button } from 'bootstrap';
 import { NavLink } from 'react-router-dom';
 
 export default class Serie extends Component 
@@ -16,6 +15,11 @@ export default class Serie extends Component
             this.setState({serie:response.data});
         })
     }
+
+    componentDidMount=()=>
+  {
+    this.mostrarSerie();
+  }
 
     state=
     {

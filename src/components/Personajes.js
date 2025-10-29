@@ -24,6 +24,11 @@ export default class Personajes extends Component
     })
   }
 
+  componentDidMount=()=>
+  {
+    this.sacarPersonajes();
+  }
+
   state=
   {
     personajes:[]
@@ -49,7 +54,7 @@ export default class Personajes extends Component
                   return(
                   <tr key={index}>
                     <td>{personaje.nombre}</td>
-                    <td>{personaje.imagen}</td>
+                    <td><img src={personaje.imagen} style={{width:"200px", height:"200px"}}/></td>
                   </tr>
                 )
                 })
