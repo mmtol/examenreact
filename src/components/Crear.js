@@ -60,7 +60,7 @@ export default class Crear extends Component
       <div>
         {
           this.state.status == true &&
-          <Navigate to={"/personajes/"+this.selectSerie.current.value}/>
+          <Navigate to={"/personajes/"+parseInt(this.selectSerie.current.value)}/>
         }
         <h1>Crear personaje</h1>
         <hr/>
